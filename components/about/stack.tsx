@@ -12,22 +12,20 @@ type Chip = {
 };
 
 const CHIPS: Chip[] = [
-  {
-    label: "Figma",
-    slug: "figma",
-    bg: "#1f1f1f",
-    fg: "#ffffff",
-    iconUrl: "https://svgl.app/library/figma.svg",
-  },
-  { label: "React", slug: "react", bg: "#1FB6CB", fg: "#ffffff" },
   { label: "Next.js", slug: "nextdotjs", bg: "#1f1f1f", fg: "#ffffff" },
+  { label: "React", slug: "react", bg: "#1FB6CB", fg: "#ffffff" },
   { label: "TypeScript", slug: "typescript", bg: "#2F74C0", fg: "#ffffff" },
-  { label: "shadcn/ui", slug: "shadcnui", bg: "#5b54ff", fg: "#ffffff" },
-  { label: "Cursor", slug: "cursor", bg: "#111111", fg: "#ffffff" },
-  { label: "GSAP", slug: "gsap", bg: "#0AE448", fg: "#0a0a0a" },
-  { label: "GitHub", slug: "github", bg: "#181717", fg: "#ffffff" },
-  { label: "Vercel", slug: "vercel", bg: "#0a0a0a", fg: "#ffffff" },
+  { label: "Python", slug: "python", bg: "#306998", fg: "#ffffff" },
+  { label: "FastAPI", slug: "fastapi", bg: "#009688", fg: "#ffffff" },
+  { label: "Django", slug: "django", bg: "#092E20", fg: "#ffffff" },
+  { label: "PostgreSQL", slug: "postgresql", bg: "#4169E1", fg: "#ffffff" },
+  { label: "Supabase", slug: "supabase", bg: "#3ECF8E", fg: "#ffffff" },
+  { label: "Prisma", slug: "prisma", bg: "#2D3748", fg: "#ffffff" },
+  { label: "TanStack Query", slug: "reactquery", bg: "#FF4154", fg: "#ffffff" },
   { label: "Tailwind CSS", slug: "tailwindcss", bg: "#2BBCF5", fg: "#ffffff" },
+  { label: "LangChain", slug: "langchain", bg: "#1C3C3C", fg: "#ffffff" },
+  { label: "Scikit-learn", slug: "scikitlearn", bg: "#F7931E", fg: "#ffffff" },
+  { label: "Git", slug: "git", bg: "#F05032", fg: "#ffffff" },
 ];
 
 const CHIP_RADIUS = 14;

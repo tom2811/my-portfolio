@@ -2,10 +2,10 @@ import {
   ArrowRight,
   Bot,
   Compass,
-  Layers,
   LineChart,
   Sparkles,
-  Wand2,
+  Github,
+  ExternalLink,
 } from "lucide-react";
 import type { ComponentType, ReactNode } from "react";
 import Image from "next/image";
@@ -29,89 +29,84 @@ type Project = {
   imageRatio: number;
   image: string;
   imageAlt: string;
+  githubUrl?: string;
+  liveUrl?: string;
 };
 
 const PROJECTS: Project[] = [
   {
-    id: "loom",
+    id: "kickskraze",
     icon: Sparkles,
-    iconLabel: "LOOM",
+    iconLabel: "Kickskraze",
     title:
-      "An AI writing companion that thinks alongside you, allowing you to capture ideas, edits, and drafts in one focused space.",
+      "A high-concurrency sneaker marketplace with atomic stock reservation and deep module architecture.",
     description:
-      "I designed Loom, a focused writing surface where ideas, edits, and drafts coexist without the chat clutter.",
-    meta: "Design Engineer, 2024",
-    imageRatio: 752 / 497,
+      "Built with Next.js 16, Supabase, PostgreSQL, and Stripe. Features transactional stock locking to prevent overselling during high-demand drops, RBAC admin console, and AI shopping assistant powered by Nexus bot.",
+    meta: "Personal Project, 2026",
+    imageRatio: 16 / 9,
     image:
-      "https://cdn.dribbble.com/userupload/46128964/file/b92b9d268dd928642ca94bd49e32923a.jpg?resize=752x497&vertical=center",
-    imageAlt: "Loom AI writing companion mockup",
+      "/projects/kickskraze.png",
+    imageAlt: "Kickskraze sneaker marketplace",
+    githubUrl: "https://github.com/tom2811/kickskraze",
+    liveUrl: "https://kickskraze-lemon.vercel.app",
   },
   {
-    id: "atlas",
-    icon: Compass,
-    iconLabel: "Atlas Studio",
-    title: "A two week brand and product sprint for a creative studio.",
-    description:
-      "End to end identity, marketing site, and a small product surface designed to feel quietly confident across every touchpoint.",
-    meta: "Product & Brand Designer, 2025",
-    imageRatio: 1024 / 768,
-    image:
-      "https://cdn.dribbble.com/userupload/24599416/file/original-1ae5075dcd129aebb16bdbca24b41ac7.png?resize=1024x768&vertical=center",
-    imageAlt: "Atlas Studio brand and product sprint mockup",
-  },
-  {
-    id: "rhythm",
-    icon: LineChart,
-    iconLabel: "Rhythm",
-    title: "Calm analytics for indie founders.",
-    description:
-      "A weekly digest that turns raw product data into a simple narrative. Built so you can read it on a Sunday with coffee.",
-    meta: "Founder & Designer, 2024",
-    imageRatio: 1024 / 768,
-    image:
-      "https://cdn.dribbble.com/userupload/47357856/file/75841fa59f32f05ca6c5ddf02d08dfe6.png?resize=1024x768&vertical=center",
-    imageAlt: "Rhythm calm analytics mockup",
-  },
-  {
-    id: "groove",
-    icon: Wand2,
-    iconLabel: "Groove",
-    title:
-      "Reimagining the booking flow for a music school, asisting thousands of students in finding the right lessons.",
-    description:
-      "I led a redesign of the lesson booking experience, cutting drop off in half and making the schedule feel like a calendar people actually want to open.",
-    meta: "Lead Designer, 2023",
-    imageRatio: 1024 / 768,
-    image:
-      "https://cdn.dribbble.com/userupload/43955214/file/original-d4cde1de803e84b97d8892e3444c04b0.png?resize=1024x768&vertical=center",
-    imageAlt: "Groove music school booking flow mockup",
-  },
-  {
-    id: "fieldnote",
-    icon: Layers,
-    iconLabel: "Fieldnote",
-    title:
-      "A pocket sized research tool for design teams that want to get out of their docs and into the world.",
-    description:
-      "Capture quotes, tag patterns, and synthesize themes in one place. The interface stays out of the way so the thinking can happen.",
-    meta: "Design Engineer, 2024",
-    imageRatio: 1024 / 768,
-    image:
-      "https://cdn.dribbble.com/userupload/30310902/file/original-621e7fe47be9d11ee14544456c693bec.png?resize=1024x768&vertical=center",
-    imageAlt: "Fieldnote pocket sized research tool mockup",
-  },
-  {
-    id: "talkback",
+    id: "nexus-bot",
     icon: Bot,
-    iconLabel: "Talkback",
-    title: "A friendlier interface for talking to language models.",
+    iconLabel: "Nexus Bot",
+    title: "Hybrid AI assistant combining RAG + database tools for intelligent query routing.",
     description:
-      "An exploration of how AI chat could feel less like a terminal and more like a conversation with a curious friend.",
-    meta: "Independent Project, 2025",
-    imageRatio: 1024 / 768,
+      "A reusable FastAPI backend that automatically detects query intent and routes between document knowledge (ChromaDB) and structured data (PostgreSQL). Multi-tenant architecture with 131 tests. Powers e-commerce AI assistants.",
+    meta: "Personal Project, 2026",
+    imageRatio: 16 / 9,
     image:
-      "https://cdn.dribbble.com/userupload/16560717/file/original-c6f745d50302d66609bfe080f99f5396.png?resize=1024x768&vertical=center",
-    imageAlt: "Talkback friendlier AI chat interface mockup",
+      "/projects/nexus-bot-placeholder.svg",
+    imageAlt: "Nexus Bot AI assistant",
+    githubUrl: "https://github.com/tom2811/nexus-bot",
+  },
+  {
+    id: "dota-glicko",
+    icon: LineChart,
+    iconLabel: "Dota Glicko Model",
+    title: "Match prediction system using Glicko-1 ratings and gradient boosting.",
+    description:
+      "Predicts professional Dota 2 outcomes by tracking 2,081 player ratings and team fatigue. Trained on 7,607 pro matches with ~70% AUC. Features live match interface with win probabilities.",
+    meta: "Personal Project, 2026",
+    imageRatio: 16 / 9,
+    image:
+      "/projects/dota-glicko-placeholder.svg",
+    imageAlt: "Dota Glicko rating model",
+    githubUrl: "https://github.com/tom2811/dota-glicko-model",
+    liveUrl: "https://dota-glicko-model.vercel.app",
+  },
+  {
+    id: "donatio",
+    icon: Compass,
+    iconLabel: "Donatio",
+    title: "Full-stack charitable giving and donation platform.",
+    description:
+      "Built with Next.js, TypeScript, and Tailwind CSS. Features TanStack Query and Zustand for state management, with ShadCN UI components for a polished user experience.",
+    meta: "Personal Project, 2025",
+    imageRatio: 16 / 9,
+    image:
+      "/projects/donatio.png",
+    imageAlt: "Donatio charitable giving platform",
+    githubUrl: "https://github.com/tom2811/donatio-nextJS",
+  },
+  {
+    id: "notespace",
+    icon: Sparkles,
+    iconLabel: "NoteSpace",
+    title:
+      "AI-powered note-taking app with PDF conversion, knowledge graphs, and intelligent summarization.",
+    description:
+      "Built with React and Django using LangChain/LangGraph. Features Quill.js rich text editor, AI chatbot assistant, real-time autosave, and social sharing with public note exploration.",
+    meta: "Hackathon Project, Apr 2025",
+    imageRatio: 16 / 9,
+    image:
+      "/projects/notespace.png",
+    imageAlt: "NoteSpace AI-powered note-taking platform",
+    githubUrl: "https://github.com/tom2811/NoteSpace-Frontend",
   },
 ];
 
@@ -124,7 +119,7 @@ export function Projects({
   withHeadline = false,
   viewMoreVisible = false,
 }: ProjectsProps): ReactNode {
-  const items = viewMoreVisible ? PROJECTS.slice(0, 4) : PROJECTS;
+  const items = viewMoreVisible ? PROJECTS.slice(0, 2) : PROJECTS;
 
   return (
     <section className="relative w-full">
@@ -132,11 +127,10 @@ export function Projects({
         {withHeadline ? (
           <FadeIn className="flex flex-col items-center gap-5 pt-12 pb-10 text-center sm:pt-20 sm:pb-14">
             <h2 className="font-serif text-[2.5rem] font-medium leading-[1.05] tracking-tight text-foreground md:text-[3rem] lg:text-[3.5rem]">
-              My projects
+              Selected Projects
             </h2>
-            <p className="max-w-[33ch] text-[18px] leading-[1.45] tracking-tight text-foreground/65 sm:text-[20px]">
-              From playful experiments to thoughtful systems, a look at the
-              work I&rsquo;m proud to have shipped.
+            <p className="max-w-[38ch] text-[18px] leading-[1.45] tracking-tight text-foreground/65 sm:text-[20px]">
+              Showcasing expertise in modern web development, system design, and AI integration.
             </p>
           </FadeIn>
         ) : null}
@@ -214,9 +208,35 @@ function ProjectCard({
           </p>
         </div>
 
-        <p className="px-1 pb-2 text-[12px] tracking-tight text-foreground/50">
-          {project.meta}
-        </p>
+        <div className="flex items-center justify-between px-1 pb-2">
+          <p className="text-[12px] tracking-tight text-foreground/50">
+            {project.meta}
+          </p>
+          <div className="flex items-center gap-2">
+            {project.githubUrl && (
+              <Link
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="focus-ring inline-flex h-8 w-8 items-center justify-center rounded-lg border border-foreground/8 bg-background text-foreground/70 transition-colors hover:bg-foreground/5 hover:text-foreground"
+                aria-label="View on GitHub"
+              >
+                <Github className="h-4 w-4" aria-hidden="true" />
+              </Link>
+            )}
+            {project.liveUrl && (
+              <Link
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="focus-ring inline-flex h-8 w-8 items-center justify-center rounded-lg border border-foreground/8 bg-background text-foreground/70 transition-colors hover:bg-foreground/5 hover:text-foreground"
+                aria-label="View live site"
+              >
+                <ExternalLink className="h-4 w-4" aria-hidden="true" />
+              </Link>
+            )}
+          </div>
+        </div>
       </article>
     </FadeIn>
   );
