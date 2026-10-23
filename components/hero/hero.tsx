@@ -13,18 +13,18 @@ export function Hero(): ReactNode {
       <div className="mx-auto w-full max-w-275 px-6 pt-44 pb-24 sm:px-10 sm:pt-56 sm:pb-32">
         <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-8">
           <FadeIn className="flex flex-col gap-4">
-            <p className="text-[20px] leading-tight tracking-tight font-medium text-foreground">
+            <p className="text-[18px] leading-tight tracking-tight font-medium text-foreground sm:text-[20px]">
               Hey, I&rsquo;m Tom
             </p>
 
-            <h1 className="text-[2.75rem] font-medium leading-[1.05] tracking-tight text-foreground md:text-[2.5rem] lg:text-[3.65rem]">
+            <h1 className="text-[clamp(1.5rem,7.2vw,2.75rem)] font-medium leading-[1.05] tracking-tight text-foreground md:text-[2.5rem] lg:text-[3.65rem]">
               <span className="block whitespace-nowrap">
                 Full-Stack Developer
               </span>
               <span className="block whitespace-nowrap">& AI Enthusiast</span>
             </h1>
 
-            <p className="max-w-[34ch] text-[22px] leading-[1.4] tracking-tight text-foreground/65">
+            <p className="max-w-[34ch] text-[18px] leading-[1.45] tracking-tight text-foreground/65 sm:text-[22px] sm:leading-[1.4]">
               Building modern web experiences with React, Next.js, and AI integration. Currently living in Bangkok, Thailand.
             </p>
 

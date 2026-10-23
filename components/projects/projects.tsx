@@ -74,7 +74,7 @@ const PROJECTS: Project[] = [
     meta: "Personal Project, 2026",
     imageRatio: 16 / 9,
     image:
-      "/projects/dota-glicko-placeholder.svg",
+      "/projects/dota-glicko.png",
     imageAlt: "Dota Glicko rating model",
     githubUrl: "https://github.com/tom2811/dota-glicko-model",
     liveUrl: "https://dota-glicko-model.vercel.app",

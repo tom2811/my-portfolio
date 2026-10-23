@@ -24,8 +24,14 @@ export function HeroCtas(): ReactNode {
           <Link
             href="/Oak_Soe_Thein_Resume.pdf"
             download
-            onMouseEnter={() => setResumeHover(true)}
-            onMouseLeave={() => setResumeHover(false)}
+            onPointerEnter={(event) => {
+              if (event.pointerType === "mouse") setResumeHover(true);
+            }}
+            onPointerLeave={(event) => {
+              if (event.pointerType === "mouse") setResumeHover(false);
+            }}
+            onFocus={() => setResumeHover(true)}
+            onBlur={() => setResumeHover(false)}
             className="focus-ring relative inline-flex h-[42px] cursor-pointer items-center justify-center rounded-xl bg-foreground px-5 text-sm font-medium text-background transition-colors hover:bg-foreground/90"
           >
             <motion.span
@@ -83,7 +89,7 @@ export function HeroCtas(): ReactNode {
         >
           <Link
             href="/projects"
-            className="border border-foreground/5 focus-ring group inline-flex cursor-pointer items-center gap-2 rounded-xl bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-2xl transition-colors hover:bg-foreground/4"
+            className="border border-foreground/10 focus-ring group inline-flex h-[42px] cursor-pointer items-center justify-center gap-2 rounded-xl bg-background px-5 text-sm font-medium text-foreground shadow-2xl transition-colors hover:bg-foreground/4"
           >
             View My Work
             <ArrowRight
