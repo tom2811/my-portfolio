@@ -4,6 +4,7 @@ import {
   Compass,
   LineChart,
   Sparkles,
+  Workflow,
   Github,
   ExternalLink,
 } from "lucide-react";
@@ -34,6 +35,21 @@ type Project = {
 };
 
 const PROJECTS: Project[] = [
+  {
+    id: "ops-pilot",
+    icon: Workflow,
+    iconLabel: "OpsPilot",
+    title:
+      "Multi-tenant IT service desk with database-enforced isolation and automated SLA workflows.",
+    description:
+      "Built with Fastify, React 19, PostgreSQL 17, and n8n. Features forced row-level security, a transactional outbox worker, business-hours SLA engine, HMAC-signed webhooks, and Prometheus observability.",
+    meta: "Personal Project, 2026",
+    imageRatio: 16 / 9,
+    image: "/projects/ops-pilot.png",
+    imageAlt: "OpsPilot IT service desk dashboard",
+    githubUrl: "https://github.com/tom2811/ops-pilot",
+    liveUrl: "https://ops-pilot.oaksoe-thein01.workers.dev/",
+  },
   {
     id: "kickskraze",
     icon: Sparkles,

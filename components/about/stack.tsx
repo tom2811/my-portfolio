@@ -15,6 +15,10 @@ const CHIPS: Chip[] = [
   { label: "Next.js", slug: "nextdotjs", bg: "#1f1f1f", fg: "#ffffff" },
   { label: "React", slug: "react", bg: "#1FB6CB", fg: "#ffffff" },
   { label: "TypeScript", slug: "typescript", bg: "#2F74C0", fg: "#ffffff" },
+  { label: "Node.js", slug: "nodedotjs", bg: "#5FA04E", fg: "#ffffff" },
+  { label: "Vite", slug: "vite", bg: "#646CFF", fg: "#ffffff" },
+  { label: "Fastify", slug: "fastify", bg: "#1f1f1f", fg: "#ffffff" },
+  { label: "Zod", slug: "zod", bg: "#408AFF", fg: "#ffffff" },
   { label: "Python", slug: "python", bg: "#306998", fg: "#ffffff" },
   { label: "FastAPI", slug: "fastapi", bg: "#009688", fg: "#ffffff" },
   { label: "Django", slug: "django", bg: "#092E20", fg: "#ffffff" },
@@ -25,6 +29,8 @@ const CHIPS: Chip[] = [
   { label: "Tailwind CSS", slug: "tailwindcss", bg: "#2BBCF5", fg: "#ffffff" },
   { label: "LangChain", slug: "langchain", bg: "#1C3C3C", fg: "#ffffff" },
   { label: "Scikit-learn", slug: "scikitlearn", bg: "#F7931E", fg: "#ffffff" },
+  { label: "n8n", slug: "n8n", bg: "#EA4B71", fg: "#ffffff" },
+  { label: "Docker", slug: "docker", bg: "#2496ED", fg: "#ffffff" },
   { label: "Git", slug: "git", bg: "#F05032", fg: "#ffffff" },
 ];
 
